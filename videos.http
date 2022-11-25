@@ -1,0 +1,28 @@
+@api = http://localhost:5000
+
+###Buscar todos los videos
+GET {{api}}/videos
+
+### Buscar un video por id
+GET {{api}}/videos/63805a3edfb66aab0afe1952
+
+###Crear video
+POST {{api}}/videos
+Content-Type: application/json
+
+{
+    "url": "https://www.youtube.com/watch?v=_RZ-T6TxP7w&t",
+    "title": "Mern Type #2",
+    "description": "Primer video de esta app"
+}
+
+###Eliminar video por id
+DELETE {{api}}/videos/63805a3edfb66aab0afe1952
+
+###
+PUT {{api}}/videos/63805ef8e9c2adfa34740b8b
+Content-Type: application/json
+
+{
+    "title": "Mern Type #1"
+}
